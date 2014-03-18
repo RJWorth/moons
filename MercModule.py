@@ -13,6 +13,7 @@ def copyinfo(whichdir,whichtime,writegood):
 	import MercModule
 #	from random import random
 #	from math import pi, sin, cos
+#	test change
 	
 	print('copyinfo '+whichdir+'/Out/info.out, '+whichtime)
 
