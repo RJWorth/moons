@@ -1,0 +1,74 @@
+
+ WARNING: Truncating the name of this object to 8 characters:  Enceladus
+
+           Integration parameters
+           ----------------------
+
+   Algorithm: Hybrid symplectic integrator (mixed coordinates)
+
+   Integration start epoch:               0.0000000 days 
+   Integration stop  epoch:          365250.0000000
+   Output interval:                    3652.500
+   Output precision:                 medium
+
+   Initial timestep:                0.500 days 
+   Accuracy parameter:              1.0000E-12
+   Central mass:                    1.1050E+00 solar masses
+   J_2:                              0.0000E+00
+   J_4:                              0.0000E+00
+   J_6:                              0.0000E+00
+   Ejection distance:               1.0000E+05 AU
+   Radius of central body:          5.1000E-03 AU
+
+   Includes collisions:                 yes
+   Includes fragmentation:              no 
+   Includes relativity:                 no 
+   Includes user-defined force routine: no 
+
+   Number of Big bodies:       16
+   Number of Small bodies:   1000
+
+
+           Integration details
+           -------------------
+
+   Initial energy:           -4.02251E-08 solar masses AU^2 day^-2 
+   Initial angular momentum:  1.29053E+02 solar masses AU^2 day^-1 
+
+   Integrating massive bodies and particles up to the same epoch.
+
+   Beginning the main integration.
+
+ Jupiter  was hit by M724     at           0.045 years
+ Jupiter  was hit by M754     at           0.049 years
+ Jupiter  was hit by M414     at           0.059 years
+ Jupiter  was hit by M30      at           0.067 years
+ Jupiter  was hit by M927     at           0.088 years
+ Jupiter  was hit by M808     at           0.129 years
+ Jupiter  was hit by M334     at           0.822 years
+ Jupiter  was hit by M510     at           1.210 years
+ Jupiter  was hit by M195     at           1.291 years
+ Jupiter  was hit by M554     at           1.354 years
+ Jupiter  was hit by M573     at           1.586 years
+ Jupiter  was hit by M218     at           1.694 years
+ Jupiter  was hit by M228     at           1.761 years
+ Jupiter  was hit by M200     at           1.853 years
+ Jupiter  was hit by M419     at         147.030 years
+ Jupiter  was hit by M713     at         158.409 years
+ Jupiter  was hit by M925     at         202.460 years
+ Jupiter  was hit by M705     at         235.931 years
+ Jupiter  was hit by M122     at         246.234 years
+ Jupiter  was hit by M64      at         347.471 years
+ Jupiter  was hit by M51      at         527.582 years
+ Jupiter  was hit by M557     at         619.419 years
+ Jupiter  was hit by M404     at         902.562 years
+ Jupiter  was hit by M770     at         904.560 years
+ Jupiter  was hit by M356     at         923.610 years
+
+   Integration complete.
+
+   Fractional energy change due to integrator:   5.06958E-12
+   Fractional angular momentum change:           5.45105E-16
+
+   Fractional energy change due to collisions/ejections:  1.20213E-14
+   Fractional angular momentum change:                    0.00000E+00

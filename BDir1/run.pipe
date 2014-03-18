@@ -1,4 +1,0 @@
-run: BDir1, 1
-makebig BDir1/In/big.in  1
-makesmall BDir1/In/small.in  1  1000
-writeparam, stop time = 365.25e3

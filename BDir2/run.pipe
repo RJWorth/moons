@@ -1,0 +1,114 @@
+run: BDir2, 1
+makebig BDir2/In/big.in  1
+makesmall BDir2/In/small.in  1  1000
+writeparam, stop time = 365.25e3
+copyinfo BDir2/Out/info.out, 1
+run: BDir2, 2
+makebig BDir2/In/big.in  2
+makesmall BDir2/In/small.in  2  1000
+writeparam, stop time = 365.25e3
+copyinfo BDir2/Out/info.out, 2
+run: BDir2, 3
+makebig BDir2/In/big.in  3
+makesmall BDir2/In/small.in  3  1000
+writeparam, stop time = 365.25e3
+   Integrating massive bodies and particles up to the same epoch.
+   Beginning the main integration.
+ Time:        200.000 years   dE/E: -1.69959E-10   dL/L: -1.81702E-16
+ Time:        400.000 years   dE/E:  3.91660E-10   dL/L:  0.00000E+00
+ Time:        600.000 years   dE/E: -7.30125E-11   dL/L: -3.63404E-16
+ Time:        800.000 years   dE/E:  2.52246E-12   dL/L: -3.63404E-16
+ Time:       1000.000 years   dE/E:  3.25479E-10   dL/L: -3.63404E-16
+   Integration complete.
+copyinfo BDir2/Out/info.out, 3
+run: BDir2, 4
+makebig BDir2/In/big.in  4
+makesmall BDir2/In/small.in  4  1000
+writeparam, stop time = 365.25e3
+   Integrating massive bodies and particles up to the same epoch.
+   Beginning the main integration.
+ Time:        200.000 years   dE/E: -1.56965E-10   dL/L:  1.81702E-16
+ Time:        400.000 years   dE/E: -1.73833E-11   dL/L:  1.81702E-16
+ Time:        600.000 years   dE/E:  1.58844E-10   dL/L:  0.00000E+00
+ Time:        800.000 years   dE/E:  7.23250E-11   dL/L:  5.45105E-16
+ Time:       1000.000 years   dE/E:  2.46204E-10   dL/L:  3.63404E-16
+   Integration complete.
+copyinfo BDir2/Out/info.out, 4
+run: BDir2, 5
+makebig BDir2/In/big.in  5
+makesmall BDir2/In/small.in  5  1000
+writeparam, stop time = 365.25e3
+   Integrating massive bodies and particles up to the same epoch.
+   Beginning the main integration.
+ Time:        200.000 years   dE/E:  2.32186E-10   dL/L: -3.63404E-16
+ Time:        400.000 years   dE/E: -3.37515E-10   dL/L: -3.63404E-16
+ Time:        600.000 years   dE/E: -4.12024E-10   dL/L: -3.63404E-16
+ Time:        800.000 years   dE/E:  5.72384E-11   dL/L:  1.81702E-16
+ Time:       1000.000 years   dE/E:  2.24370E-10   dL/L: -3.63404E-16
+   Integration complete.
+copyinfo BDir2/Out/info.out, 5
+run: BDir2, 6
+makebig BDir2/In/big.in  6
+makesmall BDir2/In/small.in  6  1000
+writeparam, stop time = 365.25e3
+   Integrating massive bodies and particles up to the same epoch.
+   Beginning the main integration.
+ Time:        200.000 years   dE/E:  1.15115E-10   dL/L: -7.26807E-16
+ Time:        400.000 years   dE/E: -1.56397E-10   dL/L: -3.63404E-16
+ Time:        600.000 years   dE/E: -2.67051E-10   dL/L: -7.26807E-16
+ Time:        800.000 years   dE/E:  2.27852E-10   dL/L:  0.00000E+00
+ Time:       1000.000 years   dE/E:  4.43888E-10   dL/L: -3.63404E-16
+   Integration complete.
+copyinfo BDir2/Out/info.out, 6
+run: BDir2, 7
+makebig BDir2/In/big.in  7
+makesmall BDir2/In/small.in  7  1000
+writeparam, stop time = 365.25e3
+   Integrating massive bodies and particles up to the same epoch.
+   Beginning the main integration.
+ Time:        200.000 years   dE/E:  3.64978E-11   dL/L:  1.81702E-16
+ Time:        400.000 years   dE/E:  2.10607E-10   dL/L:  3.63404E-16
+ Time:        600.000 years   dE/E: -3.90783E-10   dL/L:  1.81702E-16
+ Time:        800.000 years   dE/E: -1.47821E-10   dL/L:  3.63404E-16
+ Time:       1000.000 years   dE/E: -1.53200E-11   dL/L:  0.00000E+00
+   Integration complete.
+copyinfo BDir2/Out/info.out, 7
+run: BDir2, 8
+makebig BDir2/In/big.in  8
+makesmall BDir2/In/small.in  8  1000
+writeparam, stop time = 365.25e3
+   Integrating massive bodies and particles up to the same epoch.
+   Beginning the main integration.
+ Time:        200.000 years   dE/E: -1.76165E-10   dL/L: -3.63404E-16
+ Time:        400.000 years   dE/E: -2.20324E-10   dL/L:  0.00000E+00
+ Time:        600.000 years   dE/E:  2.89525E-11   dL/L: -1.81702E-16
+ Time:        800.000 years   dE/E:  7.51904E-11   dL/L:  0.00000E+00
+ Time:       1000.000 years   dE/E:  8.64185E-11   dL/L: -1.81702E-16
+   Integration complete.
+copyinfo BDir2/Out/info.out, 8
+run: BDir2, 9
+makebig BDir2/In/big.in  9
+makesmall BDir2/In/small.in  9  1000
+writeparam, stop time = 365.25e3
+   Integrating massive bodies and particles up to the same epoch.
+   Beginning the main integration.
+ Time:        200.000 years   dE/E:  6.41441E-11   dL/L: -3.63404E-16
+ Time:        400.000 years   dE/E: -2.29876E-10   dL/L:  0.00000E+00
+ Time:        600.000 years   dE/E: -2.80303E-10   dL/L: -1.81702E-16
+ Time:        800.000 years   dE/E: -1.59265E-10   dL/L:  3.63404E-16
+ Time:       1000.000 years   dE/E: -4.90372E-11   dL/L: -1.81702E-16
+   Integration complete.
+copyinfo BDir2/Out/info.out, 9
+run: BDir2, 10
+makebig BDir2/In/big.in  10
+makesmall BDir2/In/small.in  10  1000
+writeparam, stop time = 365.25e3
+   Integrating massive bodies and particles up to the same epoch.
+   Beginning the main integration.
+ Time:        200.000 years   dE/E: -2.09455E-10   dL/L: -3.63404E-16
+ Time:        400.000 years   dE/E: -5.40866E-10   dL/L:  0.00000E+00
+ Time:        600.000 years   dE/E: -2.99326E-10   dL/L: -3.63404E-16
+ Time:        800.000 years   dE/E: -7.02967E-11   dL/L: -3.63404E-16
+ Time:       1000.000 years   dE/E: -5.06958E-12   dL/L: -5.45105E-16
+   Integration complete.
+copyinfo BDir2/Out/info.out, 10
