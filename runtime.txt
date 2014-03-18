@@ -1,0 +1,10 @@
+DirTest	chloe	2	no	27
+DirTest	chloe	2	no	27
+DirTest	chloe	2	no	26
+DirTest	chloe	2	no	23
+DirTest	chloe	2	no	28
+DirTest	chloe	2	no	12
+DirTest	chloe	2	no	1721
+DirTest1	chloe	2	no	979
+DirTest2	drake	2	no	701
+DirTest3	basil	2	no	666

@@ -1,0 +1,51 @@
+
+ WARNING: Truncating the name of this object to 8 characters:  Enceladus
+
+           Integration parameters
+           ----------------------
+
+   Algorithm: Hybrid symplectic integrator (mixed coordinates)
+
+   Integration start epoch:               0.0000000 days 
+   Integration stop  epoch:          365250.0000000
+   Output interval:                    3652.500
+   Output precision:                 medium
+
+   Initial timestep:                0.500 days 
+   Accuracy parameter:              1.0000E-12
+   Central mass:                    1.1050E+00 solar masses
+   J_2:                              0.0000E+00
+   J_4:                              0.0000E+00
+   J_6:                              0.0000E+00
+   Ejection distance:               1.0000E+05 AU
+   Radius of central body:          5.1000E-03 AU
+
+   Includes collisions:                 yes
+   Includes fragmentation:              no 
+   Includes relativity:                 no 
+   Includes user-defined force routine: no 
+
+   Number of Big bodies:       16
+   Number of Small bodies:    100
+
+
+           Integration details
+           -------------------
+
+   Initial energy:           -4.02138E-08 solar masses AU^2 day^-2 
+   Initial angular momentum:  1.29053E+02 solar masses AU^2 day^-1 
+
+   Integrating massive bodies and particles up to the same epoch.
+
+   Beginning the main integration.
+
+ Jupiter  was hit by M66      at           0.095 years
+ Jupiter  was hit by M79      at           3.077 years
+
+   Integration complete.
+
+   Fractional energy change due to integrator:   5.80850E-12
+   Fractional angular momentum change:           0.00000E+00
+
+   Fractional energy change due to collisions/ejections:  1.40623E-15
+   Fractional angular momentum change:                    0.00000E+00
