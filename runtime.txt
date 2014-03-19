@@ -8,3 +8,7 @@ DirTest	chloe	2	no	1721
 DirTest1	chloe	2	no	979
 DirTest2	drake	2	no	701
 DirTest3	basil	2	no	666
+LDir1	lemay	2	no	2097
+DDir1	drake	2	no	2478
+BDir1	basil	2	no	2685
+HDir1	halley	2	no	2858

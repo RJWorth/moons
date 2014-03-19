@@ -18,7 +18,7 @@ fi
 for i in ${Dirs[*]}
 do
 	
-	nice -n 10 ./runmoons.sh $i >& $i/run.pipe &
+	nice -n 10 ./run.sh $i >& $i/run.pipe &
 	echo 'master: '$i'  '$!
 done
 
