@@ -12,3 +12,7 @@ LDir1	lemay	2	no	2097
 DDir1	drake	2	no	2478
 BDir1	basil	2	no	2685
 HDir1	halley	2	no	2858
+LDir1	lemay	10	no	10979
+DDir1	drake	10	no	12720
+HDir1	halley	10	no	13066
+BDir1	basil	10	no	14453
