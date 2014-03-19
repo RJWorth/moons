@@ -79,7 +79,12 @@ def copyinfo(whichdir,whichtime,writegood):
 ### Get .in data for rocks that hit something and write to file
 	if writegood==True:
 		gooddest=['Jupiter','Io','Europa','Ganymede','Callisto', 'Saturn','Enceladu','Rhea','Titan','Iapetus']
-		ind=numpy.array([any(dest1[i]==gooddest[j] for j in range(len(gooddest)) ) for i in range(len(dest1))])
+		ind=numpy.array([
+		(any(dest1[i]==gooddest[j] for j in range(len(gooddest))) &
+		(float(time1[i])>=60.) ) 
+		for i in range(len(dest1)) ])
+		print(ind)	
+		print(numpy.array(time1)[ind])
 		if (len(name1) > 0):
 			name=numpy.array(name1)[ind]
 			dest=numpy.array(dest1)[ind]
