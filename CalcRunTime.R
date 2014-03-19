@@ -4,33 +4,39 @@ runtime=read.table('runtime.txt')
 #runtime=read.table(paste(prefix,'runtime.txt',sep=''))
 
 if(dim(runtime)[2]==5) colnames(runtime)=c('Dir','machine','n','user','t')
-if(dim(runtime)[2]==2) {
-	colnames(runtime)=c('Dir','t')
-	machine=rep('nova',length(runtime$Dir))
-		machine[grep('MDir',runtime$Dir)]='myra'
-		machine[grep('CDir',runtime$Dir)]='chloe'
-		machine=as.factor(machine)
-		n=rep(1,length(runtime$Dir))
-		runtime=cbind(runtime,machine,n)	}
+#if(dim(runtime)[2]==2) {
+#	colnames(runtime)=c('Dir','t')
+#	machine=rep('nova',length(runtime$Dir))
+#		machine[grep('MDir',runtime$Dir)]='myra'
+#		machine[grep('CDir',runtime$Dir)]='chloe'
+#		machine=as.factor(machine)
+#		n=rep(1,length(runtime$Dir))
+#		runtime=cbind(runtime,machine,n)	}
 runtime$t=runtime$t/3600
 attach(runtime)
 
-avg=c(0,0,0)
-	avg[1]=sum(t[machine=='nova'])/sum(n[machine=='nova'])
-	avg[2]=sum(t[machine=='myra'])/sum(n[machine=='myra'])
-	avg[3]=sum(t[machine=='chloe'])/sum(n[machine=='chloe'])
+machines=levels(machine)
+avg=rep(0, length(machines))
+for (i in 1:length(machines))	{
+		avg[i]=sum(t[machine==machines[i]])/sum(n[machine==machines[i]])	}
 
 print('runtimes in hrs')
-print('   n         m         c')
+print(machines)
 print(avg)
 
-palette(c('blue','green','red'))
-pdf(paste(prefix,'runtimes.pdf',sep=''),height=4,width=4)
+palette(rainbow(length(machines)))
+pdf('runtimes.pdf',height=8,width=4)
+par(mfrow=c(2,1))
+##########
+plot(n,t, pch=20, col=machine, xlab='Iterations',ylab='Time (hrs)')
+for (i in 1:length(machines)) {
+	abline(lm(t[machine==machines[i]]~n[machine==machines[i]]),col=i)	}
+legend('topleft',pch=20,col=1:length(machines), 
+	legend=machines)
+#############
 plot(t/n,col=machine,pch=20, xlab='batch',ylab='Time per sim (hrs)')
-abline(h=avg[1],col=3)
-abline(h=avg[2],col=2)
-abline(h=avg[3],col=1)
-legend('topleft',pch=20,col=c(3,2,1), legend=c('nova','myra','chloe'))
+for (i in 1:length(machines)) abline(h=avg[i],col=i)
+
 dev.off()
 
 detach(runtime)
