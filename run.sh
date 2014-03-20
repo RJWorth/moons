@@ -69,5 +69,5 @@ fi
 	./email.sh $1 $niter 'Moons'
 # Write stop time for this directory:
 t2=$(date +%s)
-echo $1"	"$machine"	"$niter"	"$user"	"$(echo "$t2 - $t1"|bc ) >> runtime.txt
+echo $1"	"$machine"	"$niter"	"$nobj"	"$user"	"$(echo "$t2 - $t1"|bc ) >> runtime.txt
 
