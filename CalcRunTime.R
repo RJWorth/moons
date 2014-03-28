@@ -32,14 +32,23 @@ legend('bottomright',pch=20,col=1:length(machines),
 ############# plot 2
 plot(n, t/iter, col=machine,pch=20)
 	fit1=matrix(data=NA,nrow=length(machines),ncol=2)
-#for (i in 1:length(machines)) {
-for (i in c(1,3,4,5)) {
+for (i in 1:length(machines)) {
+#for (i in c(1,3,4,5)) {
 	fit1[i,]=lm(t[machine==machines[i]]/iter[machine==machines[i]]~n[machine==machines[i]])$coefficients
 	abline(fit1[i,1],fit1[i,2],col=i)	}
-
+colnames(fit1)=c('LatencyPerSim','TimePerObject')
+rownames(fit1)=machines
+print(fit1)
 ############# finish plot
 dev.off()
 
 detach(runtime)
+############### function to predict runtime
+RunTime=function(n, iter, mach, fit1)	{
+	latency=fit1[machines==mach, 1]
+	slope=fit1[machines==mach, 2]
+
+	t=(latency + slope*n)*iter
+	return(t)	}
 
 
