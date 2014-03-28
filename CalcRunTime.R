@@ -2,34 +2,41 @@
 ### Calculate average runtime per sim
 runtime=read.table('runtime.txt')
 
-stopifnot(dim(runtime)[2]==5)
+stopifnot(dim(runtime)[2]==6)
 
-colnames(runtime)=c('Dir','machine','n','user','t')
-runtime$t=runtime$t/3600
+colnames(runtime)=c('Dir','machine','iter','n','user','t')
 attach(runtime)
 
+ntot=n*iter	#number of rocks integrated, including via iteration
 machines=levels(machine)
 avg=rep(0, length(machines))
 for (i in 1:length(machines))	{
-		avg[i]=sum(t[machine==machines[i]])/sum(n[machine==machines[i]])	}
+		avg[i]=sum(t[machine==machines[i]])/sum(iter[machine==machines[i]]*n[machine==machines[i]])	}
 
-print('runtimes in hrs')
+print('runtimes in s')
 print(machines)
 print(avg)
 
 ############# set up plotting stuff
 palette(rainbow(length(machines)))
-pdf('runtimes.pdf',height=8,width=4)
-par(mfrow=c(2,1))
-############# plot the total time vs. number of iterations
-plot(n,t, pch=20, col=machine, xlab='Iterations',ylab='Time (hrs)')
+pdf('runtimes.pdf',height=4,width=8)
+par(mfrow=c(1,2))
+############# plot 1
+plot(iter,t/(255+n), pch=20, col=machine)
+	fit2=matrix(data=NA,nrow=length(machines),ncol=2)
 for (i in 1:length(machines)) {
-	abline(lm(t[machine==machines[i]]~n[machine==machines[i]]),col=i)	}
-legend('topleft',pch=20,col=1:length(machines), 
+	fit2[i,]=lm(t[machine==machines[i]]/(255+n[machine==machines[i]])~iter[machine==machines[i]])$coefficients
+	abline(fit2[i,1],fit2[i,2],col=i)	}
+legend('bottomright',pch=20,col=1:length(machines), 
 	legend=machines)
-############# plot time/iterations
-plot(t/n,col=machine,pch=20, xlab='batch',ylab='Time per sim (hrs)')
-for (i in 1:length(machines)) abline(h=avg[i],col=i)
+############# plot 2
+plot(n, t/iter, col=machine,pch=20)
+	fit1=matrix(data=NA,nrow=length(machines),ncol=2)
+#for (i in 1:length(machines)) {
+for (i in c(1,3,4,5)) {
+	fit1[i,]=lm(t[machine==machines[i]]/iter[machine==machines[i]]~n[machine==machines[i]])$coefficients
+	abline(fit1[i,1],fit1[i,2],col=i)	}
+
 ############# finish plot
 dev.off()
 

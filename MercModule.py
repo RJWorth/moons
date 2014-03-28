@@ -80,11 +80,8 @@ def copyinfo(whichdir,whichtime,writegood):
 	if writegood==True:
 		gooddest=['Jupiter','Io','Europa','Ganymede','Callisto', 'Saturn','Enceladu','Rhea','Titan','Iapetus']
 		ind=numpy.array([
-		(any(dest1[i]==gooddest[j] for j in range(len(gooddest))) &
-		(float(time1[i])>=60.) ) 
-		for i in range(len(dest1)) ])
-		print(ind)	
-		print(numpy.array(time1)[ind])
+			(any(dest1[i]==gooddest[j] for j in range(len(gooddest)))) 
+			for i in range(len(dest1)) ])
 		if (len(name1) > 0):
 			name=numpy.array(name1)[ind]
 			dest=numpy.array(dest1)[ind]
@@ -97,7 +94,7 @@ def copyinfo(whichdir,whichtime,writegood):
 				smalllines[j]= smallin.readline()
 			for j in range(5,SmallLen):
 				smalllines[j]= smallin.readline()
-				if any(name[i]==smalllines[k].split()[0] and float(time1[i])>30 for i in range(len(name)) for k in range(j-3,j+1)):
+				if any(name[i]==smalllines[k].split()[0] and float(time1[i])>60. for i in range(len(name)) for k in range(j-3,j+1)):
 					#for i in range(len(name)):
 					#print(smalllines[j])
 					#	for k in range(j-3,j+1):

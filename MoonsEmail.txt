@@ -2,4 +2,4 @@ To: rjw274@psu.edu
 From: rjw274@gmail.com
 Subject: re: Moons
 
-Check 1 on basil, iterations = niter
+Check NDir1 on nova, iterations = 10
