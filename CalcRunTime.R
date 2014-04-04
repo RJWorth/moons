@@ -49,6 +49,20 @@ RunTime=function(n, iter, mach, fit1)	{
 	slope=fit1[machines==mach, 2]
 
 	t=(latency + slope*n)*iter
+	print(paste("Time in hrs =",t/3600))
 	return(t)	}
+
+############### function to give max n for given timeframe (hrs)
+NObjects=function(t, iter, mach, fit1)	{
+	latency=fit1[machines==mach, 1]
+	slope=fit1[machines==mach, 2]
+
+	n=floor(((t*3600)/iter-latency)/slope)
+	print(paste('Max n for',iter,'iterations,',t,'hrs =',n))
+	return(n)	}
+
+############### 
+
+
 
 

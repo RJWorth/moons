@@ -9,12 +9,12 @@ machine=$(hostname -s)
 time=3		# = log(years)
 output=1	# = log(years)
 step=0.5	# = days
-niter=2	# = number of iterations to run
+niter=50	# = number of iterations to run
 
 vers='mercury_TidesGas.for'
 user='no'	# use user-defined forces?
 
-nobj=10	# number of ejected fragments
+nobj=6000	# number of ejected fragments
 pl='J'		# planet to aim for
 mode='gen'	# 'gen' to generate rock list, 'good' to use it
 
@@ -42,12 +42,12 @@ fi
 
 #### Randomize moon phases and rock positions
 		if [ $mode = 'gen' ]; then
-		python -c 'import MercModule; MercModule.makebigrand("'$1'","'$j'")'
-		python -c 'import MercModule; MercModule.makesmall("'$1'","'$j'","'$nobj'","'$pl'",1.0e12,1.0e2)'
+		python -c 'import MercModule; MercModule.MakeBigRand("'$1'","'$j'")'
+		python -c 'import MercModule; MercModule.MakeSmall("'$1'","'$j'",'$nobj',"'$pl'",1.0e12,1.0e2)'
 #### OR choose moon phases, use rocks from good.in
 		elif [ $mode = 'good' ]; then
-		python -c 'import MercModule; MercModule.makebigchoose("'$1'","'$j'")'
-		python -c 'import MercModule; MercModule.good2small("'$1'","'$j'","200")'
+		python -c 'import MercModule; MercModule.MakeMoon("'$1'","5")'
+		python -c 'import MercModule; MercModule.Good2Small("'$1'","'$j'",2000)'
 		fi
 	# Write param.in file
 	./writeparam.sh $1 $time $output $step $time $user
@@ -59,9 +59,9 @@ fi
 
 ### Write collisions summary, copy good in coords
 		if [ $mode = 'gen' ]; then
-		python -c 'import MercModule; MercModule.copyinfo("'$1'","'$j'",True)'
+		python -c 'import MercModule; MercModule.CopyInfo("'$1'","'$j'",True)'
 		elif [ $mode = 'good' ]; then
-		python -c 'import MercModule; MercModule.copyinfo("'$1'","'$j'",False)'
+		python -c 'import MercModule; MercModule.CopyInfo("'$1'","'$j'",False)'
 		fi
 	done	# j iterations
 
