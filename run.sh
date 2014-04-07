@@ -9,7 +9,7 @@ machine=$(hostname -s)
 time=3		# = log(years)
 output=1	# = log(years)
 step=0.5	# = days
-niter=50	# = number of iterations to run
+niter=10	# = number of iterations to run
 
 vers='mercury_TidesGas.for'
 user='no'	# use user-defined forces?
