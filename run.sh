@@ -9,14 +9,14 @@ machine=$(hostname -s)
 time=3		# = log(years)
 output=1	# = log(years)
 step=0.5	# = days
-niter=10	# = number of iterations to run
+niter=1	# = number of iterations to run
 
 vers='mercury_TidesGas.for'
 user='no'	# use user-defined forces?
 
 nobj=6000	# number of ejected fragments
 pl='J'		# planet to aim for
-mode='gen'	# 'gen' to generate rock list, 'good' to use it
+mode='good'	# 'gen' to generate rock list, 'good' to use it
 
 ### clean?
 #\rm $1/infosum.out

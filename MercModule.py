@@ -197,16 +197,24 @@ def MakeMoon(whichdir,whichtime):
 			thisline=File.readline().split()
 		bigxv[i]=thisline[6:]
 ### Moon parameters based on which run
-### HDir => smaller mass, #1 => smaller axis, currently all small density
+### B or D => smaller mass, H or L => larger (j)
+### 1 => smaller axis, 2 => larger axis  
+### B or H  => small density, D or L => large density
 	FakeFile=open('FakeMoons.txt','r')
 	Fake=FakeFile.readlines()
 	FakeFile.close()
+	if whichdir[0]=='B' or whichdir[0]=='H':
+		iFake=1
+	elif whichdir[0]=='D' or whichdir[0]=='L':
+		iFake=2
 	iFake=1
-	if whichdir[0]=='H':
+	if whichdir[0]=='B' or whichdir[0]=='D':
 		jFake=1
-	elif whichdir[0]=='L':
+	elif whichdir[0]=='H' or whichdir[0]=='L':
 		jFake=2
 	kFake=int(whichdir[-1])
+	print([i, j, k])
+### assign large or small d, m, and a based on i, j, and k
 	d=Fake[0].split()[iFake]
 	m=str(float(Fake[1].split()[jFake])/mSun)
 	a=Fake[2].split()[kFake]
